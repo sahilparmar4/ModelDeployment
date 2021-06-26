@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Salary Prediction App</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div>
+            <h1> Salary Prediction </h1>
+            <form action = "{{url_for('predict')}}" method = "POST">
+               <br> <label for = "Experience"> Experience: </label> <input type = "text" name = "experience" placeholder = "Experience" required /> </br>
+               <br> <label for = "Test Score"> Test Score: </label> <input type = "text" name = "test_score" placeholder = "Test Score" required /> </br>
+               <br> <label for = "Interview Score"> Interview Score: </label> <input type = "Interview Score" name = "interview_score" placeholder = "Interview Score" required /> </br>
+               <br> <button type = "submit" class = "btn btn-primary btn-block btn-large"> Predict </button> </br>
+            </form>
+            <br id = "size">
+                {{prediction_text}}
+            </br>
+        </div>
+    </body>
+</html>
